@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"lib": ["DOM"],
+		"target": "ES6",
+		"module": "ESNext",
+		"allowSyntheticDefaultImports": true,
+		"declaration": true,
+		"outDir": "./lib",
+		"strict": true,
+		"moduleResolution": "node"
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "**/__tests__/*"]
+}
