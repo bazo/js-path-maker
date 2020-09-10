@@ -1,6 +1,6 @@
 {
 	"name": "@bazo/path-maker",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Path and route maker for use in js routers",
 	"repository": "git@github.com:bazo/js-path-maker",
 	"author": "Martin Bažík <martin@bazo.sk>",
