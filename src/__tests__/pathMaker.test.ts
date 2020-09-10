@@ -7,6 +7,7 @@ const paths = {
 	PROJECT: path<{ id: string }>("/projects/:id"),
 	LOGIN: path<{}, {code: number, scope: string}>("/login"),
 	REGISTER: path("/register"),
+	LABELED: path("/register", "Registration"),
 };
 
 describe("path maker", () => {
@@ -26,5 +27,9 @@ describe("path maker", () => {
 		expect(paths.LOGIN.toString()).toEqual("/login")
 		expect(paths.LOGIN.toString()).toEqual(paths.LOGIN.path)
 		expect(paths.LOGIN.toURL({}, {code: 123, scope: "somescope"})).toEqual("/login?code=123&scope=somescope")
+	})
+
+	test('path has label', () => {
+		expect(paths.LABELED.label).toEqual("Registration")
 	})
 });
