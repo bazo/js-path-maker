@@ -4,9 +4,11 @@ interface KeyValuePair {
 
 export class Path<P extends KeyValuePair = {}, Q extends KeyValuePair = {}> {
 	path: string;
+	label: string;
 
-	constructor(path: string) {
+	constructor(path: string, label = "") {
 		this.path = path;
+		this.label = label;
 	}
 
 	toURL(pathParams: P = {} as P, queryParams: Q = {} as Q): string {
@@ -26,6 +28,6 @@ export class Path<P extends KeyValuePair = {}, Q extends KeyValuePair = {}> {
 	}
 }
 
-export default <P extends KeyValuePair = {}, Q extends KeyValuePair = {}>(path: string) => {
-	return new Path<P, Q>(path);
+export default <P extends KeyValuePair = {}, Q extends KeyValuePair = {}>(path: string, label = "") => {
+	return new Path<P, Q>(path, label);
 };
