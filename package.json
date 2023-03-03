@@ -19,7 +19,7 @@
 		"test:watch": "vitest watch",
 		"build": "tsc",
 		"prepublish": "yarn build",
-		"pub": "yarn publish --access public && git push",
+		"pub": "yarn npm publish --access public && git push",
 		"prepare": "husky install"
 	},
 	"files": [
