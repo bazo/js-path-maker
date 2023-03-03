@@ -1,0 +1,33 @@
+{
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"nursery": {
+				"recommended": true
+			},
+			"complexity": {
+				"recommended": true
+			},
+			"correctness": {
+				"recommended": true
+			},
+			"security": {
+				"recommended": true
+			},
+			"a11y": {
+				"recommended": false
+			},
+			"style": {
+				"recommended": true,
+				"noImplicitBoolean": "off"
+			}
+		},
+		"ignore": ["*.js", ".yarn", ".husky", "pnp", "lib", "node_modules"]
+	},
+	"formatter": {
+		"indentSize": 4,
+		"lineWidth": 150,
+		"ignore": ["*.js", ".yarn", ".husky", "pnp", "lib", "node_modules"]
+	}
+}
