@@ -3,10 +3,21 @@
 	"version": "1.0.2",
 	"description": "Path and route maker for use in js routers",
 	"repository": "git@github.com:bazo/js-path-maker",
-	"author": "Martin Bažík <martin@bazo.sk>",
 	"license": "MIT",
+	"author": "Martin Bažík <martin@bazo.sk>",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
+	"files": [
+		"lib/**/*"
+	],
+	"scripts": {
+		"build": "tsc",
+		"prepare": "husky install",
+		"pub": "yarn npm publish --access public && git push",
+		"prepublish": "yarn build",
+		"test": "vitest run",
+		"test:watch": "vitest watch"
+	},
 	"devDependencies": {
 		"husky": "^8.0.0",
 		"lint-staged": "^13.1.2",
@@ -14,16 +25,8 @@
 		"typescript": "^4.9.5",
 		"vitest": "^0.29.2"
 	},
-	"scripts": {
-		"test": "vitest run",
-		"test:watch": "vitest watch",
-		"build": "tsc",
-		"prepublish": "yarn build",
-		"pub": "yarn npm publish --access public && git push",
-		"prepare": "husky install"
-	},
-	"files": [
-		"lib/**/*"
-	],
-	"packageManager": "yarn@3.4.1"
+	"packageManager": "yarn@3.4.1",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/"
+	}
 }
