@@ -1,4 +1,5 @@
 import path, { PathParamSpec } from "../";
+import { describe, expect, test } from "vitest";
 
 const paths = {
 	HOME: path("/"),
