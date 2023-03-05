@@ -22,15 +22,8 @@ export class Path<P extends PathParamSpec = PathParamSpec, Q extends PathParamSp
 	private _parent: Path | undefined = undefined;
 
 	proxyHandler = {
-		get(target: Path, name: string) {
-			//@ts-ignore
-			if (target[name]) {
-				//@ts-ignore
-				return target[name];
-			}
-
-			if (target.hasOwnProperty(`_${name}`)) {
-				//@ts-ignore
+		get(target: Path, name: keyof Path) {
+			if (name in target) {
 				return target[name];
 			}
 
